@@ -4,6 +4,10 @@
 
 ![A Gray Mirror map of an indie creator: money, audience, and works, with the flows that fill and drain them](docs/hero.svg)
 
+
+https://github.com/user-attachments/assets/c6390147-796e-46a8-bd75-7d33f1a7e65d
+
+
 Gray Mirror is a skill for Claude that turns your situation into a living stock-and-flow map and runs it.
 
 Talk to Claude about your money, your energy, your habits, your team, your game economy. Anything that piles up and drains. Claude draws the map. You guess what happens. You hit Run and watch it play out week by week. Then you change one thing and run it again.
