@@ -11,8 +11,9 @@ By Law Watusi. Make the unseen seen: turn a situation into stocks, flows, and lo
 1. Talk with the person until you know what piles up (stocks), what fills and drains it (flows), and what feeds back (links and loops). Ask for real numbers. Pick one time unit.
 2. Write the model in Gray Mirror notation (below). Nothing outside the notation.
 3. Render it with `renderer.html`: replace the text inside `<textarea id="gmsrc">` with the model.
-   - If you can show interactive widgets in chat, show the renderer there.
-   - Otherwise, save it as an .html file or artifact the person can open.
+   - **Always show it inline in the chat first.** If you have any tool that draws an interactive HTML widget directly in the conversation (for example a show_widget or visualize tool), use it. Pass the renderer's content without the `<!doctype>`, `<html>`, `<head>`, and `<body>` wrapper tags, and drop the `body{...}` style rule so the host background shows through. Do not write a file instead.
+   - Only if no inline widget tool exists, save it as an .html file or artifact the person can open, and say in one line that inline drawing isn't available in this chat.
+   - Show the map only. Don't announce results, numbers at the end, or answers before the person has guessed and run it, even if they asked for the answer in the same message. Ask for their guess, then answer after they've run it.
 4. Before they hit Run, ask them to predict what the line will do. Then compare. The learning is in the gap.
 5. For "what if" questions, change one line and rerun.
 
