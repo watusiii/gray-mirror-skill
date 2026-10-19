@@ -1,0 +1,34 @@
+tick = week
+stock  Money = 788
+stock  Audience = 1000
+stock  Products = 2
+stock  Debt = 3160
+cloud  Spark
+cloud  Rover
+cloud  Smoke
+cloud  Bills
+cloud  Buyers
+cloud  Feeds
+cloud  Gone
+cloud  Ideas
+cloud  Lender
+cloud  Paid
+flow   Driving:     Spark -> Money = 110
+flow   Sitting:     Rover -> Money = 20
+flow   Smokes:      Money -> Smoke = 77
+flow   Living:      Money -> Bills = 127
+flow   Sales:       Buyers -> Money = 3% of Audience
+flow   WordOfMouth: Feeds -> Audience = 2% of Audience
+flow   Discovery:   Feeds -> Audience = 1500% of Products
+flow   Churn:       Audience -> Gone = 1% of Audience
+flow   Shipping:    Ideas -> Products = 0.25
+flow   Interest:    Lender -> Debt = 0.5% of Debt
+flow   Payment:     Debt -> Paid = 22
+link   Audience ~> Sales
+link   Audience ~> WordOfMouth
+link   Audience ~> Churn
+link   Products ~||> Discovery
+link   Debt ~> Interest
+loop   R  Audience, WordOfMouth
+loop   B  Audience, Churn
+loop   R  Debt, Interest

@@ -1,0 +1,9 @@
+# Lesson 1: the bathtub. Predict where the water settles before you hit Run.
+tick = minute
+stock  Water = 100
+cloud  Faucet
+cloud  Drain
+flow   Filling:  Faucet -> Water = 3
+flow   Draining: Water -> Drain = 10% of Water
+link   Water ~> Draining
+loop   B  Water, Draining

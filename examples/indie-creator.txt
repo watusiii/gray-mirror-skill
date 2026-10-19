@@ -1,0 +1,24 @@
+# An indie creator with a day job. Edit the numbers to match your life.
+tick = week
+stock  Money = 1200
+stock  Audience = 500
+stock  Works = 3
+cloud  DayJob
+cloud  Bills
+cloud  Buyers
+cloud  Feeds
+cloud  Gone
+cloud  Ideas
+flow   Wages:       DayJob -> Money = 400
+flow   Living:      Money -> Bills = 380
+flow   Sales:       Buyers -> Money = 2% of Audience
+flow   WordOfMouth: Feeds -> Audience = 3% of Audience
+flow   Discovery:   Feeds -> Audience = 800% of Works
+flow   Churn:       Audience -> Gone = 1.5% of Audience
+flow   Making:      Ideas -> Works = 0.5
+link   Audience ~> Sales
+link   Audience ~> WordOfMouth
+link   Audience ~> Churn
+link   Works ~||> Discovery
+loop   R  Audience, WordOfMouth
+loop   B  Audience, Churn
