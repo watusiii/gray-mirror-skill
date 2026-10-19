@@ -111,4 +111,4 @@ If Gray Mirror shows you something, tell me what you saw.
 
 ## License
 
-MIT. Use it, change it, share it. Keep the credit.
+MIT. 
